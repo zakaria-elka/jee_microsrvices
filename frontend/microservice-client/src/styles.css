@@ -1,0 +1,61 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+/* You can add global styles to this file, and also import other style files */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  
+  
+  .bills:hover {
+    background-color: rgb(255, 233, 40);
+    color: rgb(255, 255, 255);
+  }
+  .products:hover {
+    background-color: rgb(15, 147, 255);
+    color: rgb(255, 255, 255);
+  }
+  .clients:hover {
+    background-color: #2dff85;
+    color: rgb(255, 255, 255);
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  
+  }
+  .header-text{
+    font-weight: 800;
+    
+  }

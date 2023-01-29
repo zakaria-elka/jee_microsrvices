@@ -1,0 +1,12 @@
+.logout{
+    background-color: rgb(255, 110, 73);
+    color: white;
+}
+.login{
+    background-color: rgb(87, 126, 255);
+    color: white;
+}
+.locked{
+    background-color: rgb(182, 182, 182);
+    color: white;
+}

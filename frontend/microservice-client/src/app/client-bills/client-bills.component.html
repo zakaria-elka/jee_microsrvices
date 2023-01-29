@@ -1,0 +1,33 @@
+ 
+ 
+<div class="container text-center">
+    <div class="card"  >
+        <div class="card-header bg-dark text-light">{{Bills.customer.name}} was Billed on {{Bills.billingDate | date:'medium'}}</div>
+        <div class="card-body">
+             
+            <table class="table" *ngIf="Bills">
+                <thead>
+                    <tr *ngIf="!Bills"><th>Product id</th><th> Product Name</th><th>Price</th><th>Quantity</th><th>total</th> </tr>
+                     
+                </thead>
+                 
+
+                <tbody> 
+                    <tr *ngFor="let product of Bills.productItems">
+                        <td>{{product.id}}</td>
+                        <td>{{product.productName}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.quantity}}</td>    
+                        <td class="bg-info text-light">{{product.quantity*product.price}}</td>     
+                    </tr>
+                    <tr><td></td><td></td><td></td><td></td><td>{{sum}}</td></tr>
+                </tbody>
+
+            </table>
+             
+
+        </div>
+
+    </div>
+
+ </div>

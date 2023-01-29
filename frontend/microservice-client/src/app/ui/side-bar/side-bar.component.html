@@ -1,0 +1,17 @@
+<div class="sidebar">
+    <a  class="products" routerLink="/products">products</a>
+    <a *ngIf="token" class="clients"routerLink="/clients">clients  </a>
+    <a *ngIf="token" class="bills" routerLink="/bills">Bills </a>
+    
+    <a *ngIf="!token" class="locked"routerLink="/clients">clients <i  class="bi bi-lock"></i></a>
+    <a *ngIf="!token" class="locked" routerLink="/bills">Bills<i class="bi bi-lock"></i></a>
+    
+    
+    
+     
+    <a role="button" *ngIf="!token" class="login" (click)="login()" >Login</a>
+    <a role="button" *ngIf="token"  class="logout" (click)="logout()"  >Logout <span></span></a>
+   
+    
+    
+  </div>
