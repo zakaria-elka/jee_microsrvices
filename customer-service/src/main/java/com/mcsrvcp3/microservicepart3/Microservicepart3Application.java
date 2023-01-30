@@ -10,7 +10,6 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
-
 public class Microservicepart3Application {
 
     public static void main(String[] args) {
@@ -20,7 +19,7 @@ public class Microservicepart3Application {
     CommandLineRunner init(CustomerRepository customerRepository, RepositoryRestConfiguration restConfiguration){
         restConfiguration.exposeIdsFor(Customer.class);
         return args -> {
-            customerRepository.save(new Customer(null,"Zakaria El Karmoudi","zakariaelk@email.com"));
+            customerRepository.save(new Customer(null,"Zakaria elka,"zakariaelk@email.com"));
             customerRepository.save(new Customer(null,"Ahmed Amine","ahmedamine@email.com"));
             customerRepository.save(new Customer(null,"Said Hamid","saidha@email.com"));
             customerRepository.findAll().forEach(customer -> System.out.println(customer));
